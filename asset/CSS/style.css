@@ -87,8 +87,8 @@ body::before{
 #task-details{
   margin-top: 1vh;
   /* background-color: red; */
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  /* border-top: 1px solid white; */
+  /* border-bottom: 1px solid white; */
   color: white;
   padding: 1vh 0;
   display: flex;
@@ -102,6 +102,8 @@ body::before{
   /* background-color: white; */
   margin-top: 1vh;
   padding: 1vh;
+  border-bottom: 2px solid rgb(6, 136, 125);
+
 }
 
 #submit{
@@ -148,4 +150,22 @@ body::before{
   border:0px ;
   transition: all 0.8s;
   box-shadow: 0 0 15px 2px red;
+}
+.items{
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid white;
+
+}
+.items span{
+  color:white
+}
+.category-display p{
+  background-color: #f0f;
+  color:white;
+  padding:5px 15px;
+  
 }
