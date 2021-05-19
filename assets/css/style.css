@@ -169,3 +169,30 @@ body::before{
   padding:5px 15px;
   
 }
+
+/* Styling the Calender Format */
+#calender {
+  position: relative;
+  width: 150px; height: 20px;
+  color: white;
+}
+
+#calender:before {
+  position: absolute;
+  top: 3px; left: 3px;
+  content: attr(data-date);
+  display: inline-block;
+  color: black;
+}
+
+/* #calender::-webkit-datetime-edit, #calender::-webkit-inner-spin-button, #calender::-webkit-clear-button {
+  display: none;
+} */
+
+#calender::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  color: black;
+  opacity: 1;
+}

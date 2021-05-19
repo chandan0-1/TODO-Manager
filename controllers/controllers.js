@@ -1,9 +1,4 @@
-
-
-
-module.exports = function(req, res){
-  console.log(req.body)
-  var c = [
+var dataList = [
     {
       name:"need to go on walk at 7AM",
       date:"20 May 2021",
@@ -15,12 +10,24 @@ module.exports = function(req, res){
       category:"Other"
     }
   ]
+
+module.exports = function(req, res){
+  
+  
   return res.render('index',{
     title: "ToDo Manager",
-    Data: c
+    Data: dataList
   });
 }
 
+
+module.exports.createData = function(req, res){
+
+  console.log(req.body)
+  dataList.push(req.body)
+  return res.redirect('/')
+
+}
 
 module.exports.home = function(req, res){
   return res.send("from Cntrls's Homepage");
