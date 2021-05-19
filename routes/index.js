@@ -4,7 +4,7 @@ const router = express.Router();
 // const 
 const mainControllers = require('../controllers/controllers');
 router.get('/', mainControllers);
-router.get('/home', mainControllers.home);
+// router.get('/home', mainControllers.home);
 
 router.post('/create-task', mainControllers.createData)
 

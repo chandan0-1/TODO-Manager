@@ -6,3 +6,14 @@ $("#calender").on("change", function() {
       .format( this.getAttribute("data-date-format") )
   )
 }).trigger("change")
+
+
+
+
+  VanillaTilt.init(document.querySelectorAll("#title"), {
+    max: 25,
+    speed: 400
+  });
+  
+  // //It also supports NodeList
+  // VanillaTilt.init(document.querySelectorAll("#display"));
