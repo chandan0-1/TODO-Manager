@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> <%= title%></title>
+</head>
+<body>
+
+  <div id="container">
+    <h1 id="title">To Do Manager</h1>
+    <!-- Sending data to the Server -->
+    <form action="/create-task" method="POST">
+        <div id="input-div">
+          <!-- <p>Description</p> -->
+          <input type="text" name="name" id="task-name" placeholder="What do you want to do?" required>
+        </div>
+
+
+        <div id="task-details">
+          <div>
+            <label for="category">Category:</label>
+            <input type="text" name="category" placeholder="Choose Category:" id="favCktPlayer" list="Category">  
+            
+            <datalist id="Category">
+                <option value="School">
+                <option value="Personal">
+                <option value="Work">
+                <option value="Revision">
+                <option value="Other">
+            </datalist> 
+          </div>
+
+          <div>
+            <label for="date">Date:</label>
+          <input placeholder="Choose Date" name="data" type="date">
+
+          </div>
+        </div>
+        <div id="button">
+
+          <!-- <input type='submit' value=""> -->
+          <button type="submit" id="submit"><i class="fas fa-plus"></i> Add Task</button>
+          <button id="delete"><i class="far fa-trash-alt"></i> Delete Task</button>
+
+        </div>
+    </form>
+
+    <!-- <div class="items">
+      <div class="item-details">
+        <input type="checkbox">
+        <span>Walking from 7 AM</span></br>
+        <span>20 May 2021 </span>
+      </div>
+      <div class="category-display">
+        <p>Work</p>
+      </div>
+    </div> -->
+
+    <!-- <div>
+      <ul> -->
+        <% for(let val of Data){ %>
+          <div class="items">
+            <div class="item-details">
+              <input type="checkbox">
+              <span> <%= val.name %>  </span></br>
+              <span> <%= val.date%></span>
+            </div>
+            <div class="category-display">
+              <p> <%= val.category %> </p>
+            </div>
+          </div>
+        <% }%>
+      <!-- </ul>
+    </div> -->
+
+
+  </div>
+
+</body>
+</html>

@@ -1,5 +1,24 @@
+
+
+
 module.exports = function(req, res){
-  return res.send("from Cntrls");
+  console.log(req.body)
+  var c = [
+    {
+      name:"need to go on walk at 7AM",
+      date:"20 May 2021",
+      category:"Important"
+    },
+    {
+      name:"need to have Dinner at * PM",
+      date:"21 May 2021",
+      category:"Other"
+    }
+  ]
+  return res.render('index',{
+    title: "ToDo Manager",
+    Data: c
+  });
 }
 
 
