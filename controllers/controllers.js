@@ -42,3 +42,29 @@ module.exports.createData = function (req, res) {
 }
 
 
+// Controller function to Delete Date from the DB
+module.exports.deleteData = function(req, res){
+
+  let id = req.query.id;
+
+  Db.findByIdAndDelete(id, function(err){
+    if (err) { console.log("Error in Deleting the object from DB"); return; }
+
+    return res.redirect('back');
+  })
+}
+
+
+// Deleting all the data from DB
+module.exports.deleteAll = function(req, res){
+
+  Db.remove({}, function(err){
+    if (err) { console.log("Error in Deleting the object from DB"); return; }
+    return res.redirect('back');
+  })
+}
+
+
+
+
+

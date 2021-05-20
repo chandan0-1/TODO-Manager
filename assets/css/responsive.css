@@ -1,6 +1,104 @@
-  /*--------------Setting body with various design ------------ */
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+  #container{
+    width:80%;
+    float: left;
+    height: 100vh;
+  }
+
+ body::after{
+    display: none;
+  }
+  #title{
+    font-size: 1.2rem;
+    margin-top: 1vh;
+  }
   
-  body{
+  .task-name{
+    font-size: 0.8rem;
+    }
+
+    #task-name{
+      height: 6vh;
+      width: 95%;
+      font-size: 0.6rem;
+    }
+  
+    .date{
+      font-size: 0.4rem;
+    }
+
+    .task-category{
+      font-size: 0.4rem;
+    }
+
+    #task-details{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width:100%;
+      height: auto;
+      padding-top: 1vh;
+      /* background-color: red; */
+    }
+    #category, #calender-div{
+      display: flex;
+      align-items: center;
+      width: 50%;
+    }
+    
+    #category-header{
+      width:50%;
+      height: 3.2vh;
+      font-size: 0.2rem;
+    }
+
+    #calender{
+      font-size: 0.2rem;
+      width:45%;
+      height:4.5vh;
+    }
+
+    #button{
+      height: 7vh;
+    }
+
+    #submit, #delete{
+      width:18vw;
+      height: 6vh;
+      font-size: 0.7rem;
+    }
+
+    .delete-button a{
+      font-size: 0.8rem;
+    }
+
+    #display {
+      position: relative;
+      height: 60vh;
+    }
+
+    #db-length{
+      font-size: 0.7rem;
+    }
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1300px) {
+    /*--------------Setting body with various design ------------ */
+  
+    body{
       display: flex;
       background: #161623;
       justify-content: center;
@@ -320,3 +418,74 @@
       text-shadow:0px 0px 2px rgb(228, 225, 225);
 
     }
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) , (max-width: 765) {
+  #container{
+    width:100%;
+    margin-top: -1.5vh;
+    height: 94vh;
+  }
+
+ body::after{
+    display: none;
+  }
+  #title{
+    font-size: 1.6rem;
+  }
+
+  .task-name{
+    font-size: 0.6rem;
+    }
+
+    #task-name{
+    height: 5vh;
+    width: 95%;
+    font-size: 0.6rem;
+    }
+  
+    .date{
+      font-size: 0.4rem;
+    }
+
+    .task-category{
+      font-size: 0.4rem;
+    }
+
+    #task-details{
+      height: auto;
+      padding-top: 1vh;
+    }
+
+    #calender{
+      width:100%;
+      font-size: 0.7rem;
+    }
+
+    #button{
+      height: 2vh;
+    }
+
+    #submit, #delete{
+      width:25vw;
+      height: 2.8vh;
+      font-size: 0.5rem;
+    }
+
+    .delete-button a{
+      font-size: 0.8rem;
+    }
+
+    #display {
+      /* position: relative; */
+      height: 59vh;
+    }
+
+    #db-length{
+      font-size: 0.7rem;
+      text-shadow: none;
+      color:white;
+    }
+}

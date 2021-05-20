@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
       <!-- Google font CDN -->
+      <link rel="stylesheet" href="/css/responsive.css">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
       <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Montserrat+Alternates:wght@100;400&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Montserrat+Alternates:wght@100;400&display=swap" rel="stylesheet">
       <!-- Rendering the title of the project via EJS -->
       <title> <%= title%></title>
   </head>
@@ -36,7 +36,7 @@
 
       <!--------- Cateogry Selection Input ------->
           <div id="task-details">
-            <div>
+            <div id="category">
               <label for="category">Category:&nbsp </label>
               <input type="text" name="category" placeholder="Choose Category:" id="category-header" list="Category" required>  
               
@@ -50,7 +50,7 @@
             </div>
 
         <!------------- Calender Div ----------->
-            <div>
+            <div id="calender-div">
                 <label for="date">Date:</label>
                 <input name="date" id="calender" data-date="" data-date-format="DD MMMM YYYY" value="2015-08-09" type="date" required >
             </div>
@@ -61,7 +61,7 @@
       <!---------------- Showing two main Button ---------->
           <div id="button">
               <button type="submit" id="submit"><i class="fas fa-plus"></i> Add Task</button>
-              <button id="delete"><i class="far fa-trash-alt"></i> Delete Task</button>
+              <a id="delete" href="/delete-all"><i class="far fa-trash-alt delete-icon"></i> &nbspClear All</a>
           </div>
     </form>
         
@@ -73,7 +73,7 @@
               <% for(let val of Data){ %>
                 
                   <tr class="items-div">
-                      <td class="delete-button"><a href=" "><i class="far fa-trash-alt"></i></a> </td>
+                      <td class="delete-button"><a href="/delete-task/?id=<%= val.id %>"><i class="far fa-trash-alt"></i></a> </td>
               
                       <td class="task-name"> <span> <%= val.name %>  </span> </td>
                       <td class="date">  <span> <%= val.date.substring(8 )+ " " + month[parseInt(val.date.substring(5,7)) - 1] + ' ' + val.date.substring(0,4) %></span> </td>
