@@ -1,3 +1,5 @@
+
+// Script to convert month digit to month name
 document.getElementById('calender').value = new Date().toISOString().substring(0, 10);
 $("#calender").on("change", function() {
   this.setAttribute(
@@ -7,13 +9,3 @@ $("#calender").on("change", function() {
   )
 }).trigger("change")
 
-
-
-
-  VanillaTilt.init(document.querySelectorAll("#title"), {
-    max: 25,
-    speed: 400
-  });
-  
-  // //It also supports NodeList
-  // VanillaTilt.init(document.querySelectorAll("#display"));
