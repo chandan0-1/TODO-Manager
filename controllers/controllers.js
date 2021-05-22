@@ -23,8 +23,8 @@ module.exports = function (req, res) {
       Data: db,
       db_length:Count
       
-    });
-  })
+    })
+  }).sort("created_At");
 }
 
 

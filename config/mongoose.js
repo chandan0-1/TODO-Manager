@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 // Creating Db named as todo_list_db
 // mongoose.connect('mongodb://localhost/todo_list_db');
-mongoose.connect(process.env.db);
+mongoose.connect(process.env.db || 'mongodb://localhost/todo_list_db' );
 
 // Making connecting to the DB
 const db = mongoose.connection;
