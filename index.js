@@ -7,7 +7,7 @@ const Task = require("./models/task");
 const app = express();
 
 // defined port on which server will run
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 app.use(express.urlencoded());
 
